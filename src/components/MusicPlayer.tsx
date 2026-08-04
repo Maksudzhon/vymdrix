@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import track505 from "@/assets/505ArcticMonkeys.mp3.asset.json";
-import trackIce from "@/assets/IceBaby.mp3.asset.json";
-import trackRoad from "@/assets/farfromanyroad.mp3.asset.json";
+import track505 from "@/assets/505ArcticMonkeys.mp3";
+import trackIce from "@/assets/IceBaby.mp3";
+import trackRoad from "@/assets/farfromanyroad.mp3";
 import { useLang } from "@/lib/i18n";
 import { t } from "@/lib/content";
 
 const playlist = [
-  { title: "505", artist: "Arctic Monkeys", src: track505.url },
-  { title: "Ice Baby", artist: "GUF", src: trackIce.url },
-  { title: "Far From Any Road", artist: "The Handsome Family", src: trackRoad.url },
+  { title: "505", artist: "Arctic Monkeys", src: track505 },
+  { title: "Ice Baby", artist: "GUF", src: trackIce },
+  { title: "Far From Any Road", artist: "The Handsome Family", src: trackRoad },
 ];
 
 function fmt(sec: number) {

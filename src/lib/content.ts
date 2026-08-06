@@ -136,9 +136,9 @@ export const t = {
   muteLabel: { uz: "Ovozni o'chirish", ru: "Выключить звук", en: "Mute", ja: "ミュート" },
   unmuteLabel: { uz: "Ovozni yoqish", ru: "Включить звук", en: "Unmute", ja: "ミュート解除" },
   partyOn: {
-    uz: "Vegas rejimi",
-    ru: "Режим Вегас",
-    en: "Vegas mode",
+    uz: "Vegas vibe",
+    ru: "Вегас вайб",
+    en: "Vegas vibe",
     ja: "ベガスモード",
   },
   partyOff: {

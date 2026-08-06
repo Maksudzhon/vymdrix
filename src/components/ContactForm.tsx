@@ -25,7 +25,7 @@ export function ContactForm() {
   };
 
   const field =
-    "w-full border-3 border-foreground bg-background px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-foreground placeholder:text-foreground/40 focus:outline-none focus:shadow-hard";
+    "w-full border-3 border-foreground bg-background px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-foreground placeholder:text-muted-foreground focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-primary focus:shadow-hard";
 
   return (
     <form className="mt-6 space-y-4" onSubmit={onSubmit}>

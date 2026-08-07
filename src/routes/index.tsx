@@ -76,7 +76,7 @@ function Index() {
       <ScrollProgress />
       <BackToTop />
 
-      <div className="fixed right-4 top-6 z-40 flex items-center gap-2 sm:right-6 sm:top-8">
+      <div className="fixed right-3 top-3 z-40 flex items-center gap-2 sm:right-6 sm:top-8">
         <PartyToggle />
         <LanguageSwitcher />
       </div>
@@ -85,7 +85,7 @@ function Index() {
       <header className="border-b-4 border-foreground">
         <div className="mx-auto grid max-w-6xl grid-cols-1 lg:grid-cols-[1.15fr_1fr]">
           <div className="flex flex-col justify-between border-foreground p-6 sm:p-8 lg:border-r-4 lg:p-12">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pr-24 font-mono text-[10px] uppercase tracking-[0.2em] sm:justify-between sm:pr-28 sm:text-[11px] sm:tracking-[0.25em]">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-12 font-mono text-[10px] uppercase tracking-[0.2em] sm:justify-between sm:pr-28 sm:pt-0 sm:text-[11px] sm:tracking-[0.25em]">
               <span>{tr(t.role)}</span>
               <span>{tr(t.est)}</span>
             </div>

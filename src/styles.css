@@ -452,3 +452,40 @@ html {
     animation: none !important;
   }
 }
+
+/* ── Boot screen + cursor sparks ─────────────────── */
+@keyframes boot-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes spark-pop {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -140%) scale(1.4) rotate(140deg);
+  }
+}
+
+.boot-screen {
+  background-image: repeating-linear-gradient(
+    0deg,
+    color-mix(in oklch, var(--foreground) 6%, transparent) 0 1px,
+    transparent 1px 4px
+  );
+}
+
+.spark {
+  animation: spark-pop 0.7s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spark {
+    display: none;
+  }
+}

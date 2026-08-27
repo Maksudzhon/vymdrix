@@ -104,6 +104,10 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
             {tr(project.desc)}
           </p>
 
+          <p className="border-3 border-foreground bg-secondary px-4 py-3 font-mono text-[10px] uppercase leading-relaxed tracking-[0.15em] text-secondary-foreground">
+            ⚠ {tr(t.demoNotice)}
+          </p>
+
 
           <div>
             <h4 className="font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/60">

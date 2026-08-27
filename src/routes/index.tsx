@@ -10,6 +10,11 @@ import { BackToTop } from "@/components/BackToTop";
 import { PartyToggle } from "@/components/PartyToggle";
 import { Reveal } from "@/components/Reveal";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { BootScreen } from "@/components/BootScreen";
+import { CursorTrail } from "@/components/CursorTrail";
+import { GlitchAudio } from "@/components/GlitchAudio";
+import { RoastToast } from "@/components/RoastToast";
+
 
 // modal code (and its content) only downloads when a visitor opens a project
 const ProjectModal = lazy(() =>
@@ -73,13 +78,18 @@ function Index() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-background font-sans text-foreground">
+      <BootScreen />
+      <CursorTrail />
       <ScrollProgress />
       <BackToTop />
+      <RoastToast />
 
       <div className="fixed right-3 top-3 z-40 flex items-center gap-2 sm:right-6 sm:top-8">
+        <GlitchAudio />
         <PartyToggle />
         <LanguageSwitcher />
       </div>
+
 
       {/* ── HERO ─────────────────────────────────────── */}
       <header className="border-b-4 border-foreground">
@@ -235,6 +245,11 @@ function Index() {
               </span>
             </div>
 
+            <p className="mb-8 flex items-start gap-3 border-3 border-foreground bg-secondary px-4 py-3 font-mono text-[10px] uppercase leading-relaxed tracking-[0.15em] text-secondary-foreground shadow-hard sm:text-[11px]">
+              <span aria-hidden>⚠</span>
+              {tr(t.demoNotice)}
+            </p>
+
             {/* filters + search */}
             <div className="mb-8 space-y-4">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -313,7 +328,12 @@ function Index() {
                     >
                       <div className="flex items-center justify-between font-mono text-[10px] tracking-[0.3em]">
                         <span>{p.idx}</span>
-                        <span>{p.year}</span>
+                        <span className="flex items-center gap-2">
+                          <span className="border-2 border-foreground bg-background px-2 py-0.5 text-[9px] tracking-[0.2em] text-foreground">
+                            {tr(t.demoBadge)}
+                          </span>
+                          {p.year}
+                        </span>
                       </div>
                     </div>
                     <h3 className="font-display text-2xl uppercase leading-none transition-transform group-hover:translate-x-1 sm:text-3xl">

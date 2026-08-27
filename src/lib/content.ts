@@ -136,9 +136,9 @@ export const t = {
   muteLabel: { uz: "Ovozni o'chirish", ru: "Выключить звук", en: "Mute", ja: "ミュート" },
   unmuteLabel: { uz: "Ovozni yoqish", ru: "Включить звук", en: "Unmute", ja: "ミュート解除" },
   partyOn: {
-    uz: "Vegas vibe",
-    ru: "Вегас вайб",
-    en: "Vegas vibe",
+    uz: "Vegas rejimi",
+    ru: "Режим Вегас",
+    en: "Vegas mode",
     ja: "ベガスモード",
   },
   partyOff: {
@@ -165,7 +165,109 @@ export const t = {
     en: "Loading...",
     ja: "読み込み中...",
   },
+  demoBadge: { uz: "Demo", ru: "Демо", en: "Demo", ja: "デモ" },
+  demoNotice: {
+    uz: "Diqqat: bu yerdagi barcha loyihalar DEMO rejimida ishlaydi — ko'rsatish uchun, to'lovlar va real ma'lumotlar yo'q.",
+    ru: "Внимание: все проекты здесь работают в DEMO-режиме — только для показа, без реальных данных и платежей.",
+    en: "Heads up: every project here runs in DEMO mode — for showcase only, no real data or payments.",
+    ja: "注意：ここでのプロジェクトはすべてDEMOモードで動作します — 展示用で、実データや決済はありません。",
+  },
+  bootTitle: { uz: "Yuklanmoqda", ru: "Загрузка", en: "Booting", ja: "起動中" },
+  skipBoot: { uz: "O'tkazib yuborish", ru: "Пропустить", en: "Skip", ja: "スキップ" },
+  glitchSoundOn: {
+    uz: "Glitch ovozi yoniq",
+    ru: "Звук глитча включён",
+    en: "Glitch sound on",
+    ja: "グリッチ音オン",
+  },
+  glitchSoundOff: {
+    uz: "Glitch ovozi o'chiq",
+    ru: "Звук глитча выключен",
+    en: "Glitch sound off",
+    ja: "グリッチ音オフ",
+  },
 } satisfies Record<string, Tri>;
+
+/** Playful roasts — bullying the visitor, but with love. */
+export const roastJokes: Tri[] = [
+  {
+    uz: "Sichqonchani shuncha aylantirasan, kursoringga bosh aylandi 🌀",
+    ru: "Ты так возишь мышкой, что у курсора уже голова кружится 🌀",
+    en: "You're moving that mouse so much the cursor is getting dizzy 🌀",
+    ja: "マウス動かしすぎ、カーソルが目を回してるよ 🌀",
+  },
+  {
+    uz: "Bu yerda 4 ta til bor, lekin sen baribir tugmalarni bosishni tanlading 😌",
+    ru: "Тут 4 языка, а ты всё равно просто тыкаешь кнопки 😌",
+    en: "Four languages here and you still just click random buttons 😌",
+    ja: "4か国語あるのに、結局ボタン連打なんだね 😌",
+  },
+  {
+    uz: "Scroll qilaverasan... portfolio emas, TikTok deb o'ylading shekilli 📱",
+    ru: "Скроллишь и скроллишь... это портфолио, а не TikTok 📱",
+    en: "Still scrolling... this is a portfolio, not TikTok 📱",
+    ja: "スクロールしすぎ…ここTikTokじゃないよ 📱",
+  },
+  {
+    uz: "Sen ham 'keyin bog'lanaman' deysanmi? Hammasi shunday deydi 😂",
+    ru: "Тоже скажешь «напишу позже»? Все так говорят 😂",
+    en: "Gonna say 'I'll reach out later'? Everyone says that 😂",
+    ja: "「あとで連絡する」って言うでしょ？みんなそう言う 😂",
+  },
+  {
+    uz: "Vegas rejimini sinab ko'rmading — qo'rqoqsan? 💡",
+    ru: "Ты ещё не включил режим Вегас — боишься? 💡",
+    en: "You haven't tried Vegas mode yet — scared? 💡",
+    ja: "まだベガスモード試してないの？怖い？ 💡",
+  },
+  {
+    uz: "Yaxshi ko'raman seni, lekin CV yuborishni unutma 🫶",
+    ru: "Я тебя люблю, но резюме всё-таки пришли 🫶",
+    en: "Love you, but seriously — send that message 🫶",
+    ja: "大好きだよ、でもメッセージは送ってね 🫶",
+  },
+];
+
+
+/** Deliberately silly loading lines. Pure vibes, zero truth. */
+export const bootJokes: Tri[] = [
+  {
+    uz: "Kofe qaynatilmoqda... 47%",
+    ru: "Варим кофе... 47%",
+    en: "Brewing coffee... 47%",
+    ja: "コーヒーを淹れています... 47%",
+  },
+  {
+    uz: "StackOverflow'dan kod ko'chirilmoqda (halol emas, lekin ishlaydi)",
+    ru: "Копируем код со StackOverflow (нечестно, но работает)",
+    en: "Copying code from StackOverflow (not proud, still works)",
+    ja: "StackOverflowからコードをコピー中（内緒で）",
+  },
+  {
+    uz: "node_modules o'lchami: Yupiterdan kattaroq",
+    ru: "Размер node_modules: больше Юпитера",
+    en: "node_modules size: bigger than Jupiter",
+    ja: "node_modules のサイズ：木星より大きい",
+  },
+  {
+    uz: "404 ta bug topildi, 405 tasi tuzatildi. Matematika so'ramang.",
+    ru: "Найдено 404 бага, исправлено 405. Математику не спрашивайте.",
+    en: "Found 404 bugs, fixed 405. Don't ask about the math.",
+    ja: "404個のバグを発見、405個を修正。計算は聞かないで。",
+  },
+  {
+    uz: "Dizayner yig'layapti... jarayon davom etmoqda",
+    ru: "Дизайнер плачет... процесс продолжается",
+    en: "Designer is crying... proceeding anyway",
+    ja: "デザイナーが泣いています…続行します",
+  },
+  {
+    uz: "Neon lampalar isitilmoqda 💡",
+    ru: "Разогреваем неоновые лампы 💡",
+    en: "Warming up the neon tubes 💡",
+    ja: "ネオン管を温めています 💡",
+  },
+];
 
 export const stats: { value: string; label: Tri; tone: string }[] = [
   {
@@ -217,7 +319,7 @@ export const skills: { num: string; title: Tri; desc: Tri; tags: string[]; tone:
       en: "Server architecture and APIs",
       ja: "サーバー設計とAPI",
     },
-    tags: ["Python", "Django", "Node.js", "TypeScript"],
+    tags: ["Python", "Node.js", "TypeScript"],
     tone: "bg-secondary text-secondary-foreground",
   },
   {
@@ -246,7 +348,7 @@ export const skills: { num: string; title: Tri; desc: Tri; tags: string[]; tone:
       en: "Backend-as-a-service and storage",
       ja: "BaaSとストレージ",
     },
-    tags: ["MongoDB", "Firebase", "Supabase"],
+    tags: ["Firebase", "Supabase"],
     tone: "bg-rose text-rose-foreground",
   },
 ];
@@ -380,10 +482,8 @@ export const marquee = [
   "NEXT.JS",
   "TAILWIND",
   "PYTHON",
-  "DJANGO",
   "NODE.JS",
   "AIOGRAM",
-  "MONGODB",
   "FIREBASE",
   "SUPABASE",
 ];
